@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM practice</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      #passBtn img {
+        max-width: 100%;
+        max-height: calc(100vh - 150px);
+      }
+      #photoBtn {
+            display: block;
+            width: 400px; 
+            margin: 10px auto; 
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript DOM</h1>
+    <p>
+      This is one of several projects on Javascript that shows how the Document
+      Object Model (DOM) along with eventListeners works on the webpage.
+    </p>
+    <button id="btn">Click me</button>
+    <br />
+    <br />
+    <br />
+    <button id="photoBtn">Click to display image</button>
+
+    <div id="passBtn" style="display: none">
+      <img src="./cadillac_PNG42.png" alt="Car Photo" />
+    </div>
+
+    <script>
+      const passBtn = document.getElementById("passBtn");
+      const photoBtn = document.getElementById("photoBtn");
+
+     
+      photoBtn.addEventListener("click", function () {
+        
+        if (passBtn.style.display === "none" || passBtn.style.display === "") {
+          passBtn.style.display = "block";
+          photoBtn.textContent = "Click to hide image";
+        } else {
+          passBtn.style.display = "none";
+          photoBtn.textContent = "Click to display image";
+        }
+      });
+    </script>
+  </body>
+</html>
