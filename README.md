@@ -1,5 +1,5 @@
 # documentObjectModel
-- practice on DOM and eventListener
+- practice on Document object model(DOM) and eventListener
 
 
 - eventListener: onclick 
